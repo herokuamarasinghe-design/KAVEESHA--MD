@@ -1,21 +1,25 @@
-module.exports = {
-    AUTO_VIEW_STATUS: 'true',
-    AUTO_LIKE_STATUS: 'true',
-    AUTO_RECORDING: 'true',
-    AUTO_LIKE_EMOJI: ['🧩', '🍉', '💜', '🌸', '🪴', '💊', '💫', '🍂', '🌟', '🎋', '😶‍🌫️', '🫀', '🧿', '👀', '🤖', '🚩', '🥰', '🗿', '💜', '💙', '🌝', '🖤', '💚'],
-    PREFIX: '.',
-    MAX_RETRIES: 3,
-    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/FzISXdO9Z416SQ9hVTcdB5?mode=hqrt2',
-    ADMIN_LIST_PATH: './admin.json',
-    IMAGE_PATH: 'https://files.catbox.moe/l74kdf.jpg',
-    NEWSLETTER_JID: '120363292101892024@newsletter',
-    NEWSLETTER_MESSAGE_ID: '428',
-    OTP_EXPIRY: 300000,
-    NEWS_JSON_URL: '',
-    BOT_NAME: '𝐐𝐔𝐄𝐄𝐍-𝐑𝐀𝐒𝐇𝐔-𝐌𝐃',
-    OWNER_NAME: 'Nipun Harshana',
-    OWNER_NUMBER: '94764085107',
-    BOT_VERSION: '5.0.0',
-    BOT_FOOTER: '> 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝐐𝐔𝐄𝐄𝐍 𝐑𝐀𝐒𝐇𝐔 𝐌𝐃 𝙾𝙵𝙲 🫟',
-    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VaicB1MISTkGyQ7Bqe23',
-};
+javascript
+const fs = require('fs')
+
+global.owner = ['94765487074'] // Oyage number eka hari
+global.ownername = 'Kaveesha'
+global.botname = 'KAVEESHA MINI'
+global.prefix = '.'
+
+global.mess = {
+    success: 'Wade hari! ✅',
+    admin: 'Meka adminlata vitharayi bosa! 👮',
+    owner: 'Meka mage owner (Kaveesha) ta vitharayi! 👑',
+    group: 'Meka groups wala vitharayi weda කරන්නේ! 👥',
+    wait: 'Poddak hitapan Kaveesha, wade wenawa... ⏳',
+}
+
+let file = require.resolve(__filename)
+fs.watchFile(file, () => {
+    fs.unwatchFile(file)
+    delete require.cache[file]
+    require(file)
+})
+```
+
+-----
